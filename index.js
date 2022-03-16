@@ -27,7 +27,7 @@ console.log(askForString().split(''))
 
 const array = ['jay', 'bob', 'jim', 'dave']
 
-const newArray = array.mop((el) => {
+const newArray = array.map((el) => {
     return el.toUppercase()
 })
 
