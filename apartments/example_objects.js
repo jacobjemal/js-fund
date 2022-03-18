@@ -10,21 +10,21 @@ const car = {
     doors: 2,
     modle: 'BMW',
     price: '200000',
-    make: 'M4',
+    make: 'M4'
 }
 
 const company = {
     name: 'vittles',
     ceo: 'Michael Law',
     isTheBest: true,
-    publiclyTraded: false,
+    publiclyTraded: false
 }
 
 const room = {
     windows: 0,
     dimensions: '200x200',
     closet: false,
-    pets: false,
+    pets: false
 }
 const item = {
     name: 'exaclibur',
