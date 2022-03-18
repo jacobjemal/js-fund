@@ -53,7 +53,6 @@ let tenant2 = {
     age: 33 
 }
         
-
 let building = {
     streetAddress: '74 N 7th Street, Brooklyn NY 11249',
     laundry: false,
@@ -62,11 +61,26 @@ let building = {
         if (apt.tenants.length === apt.bedrooms) {
         return `${apt.unit} is already full!`
         }
-        if (this.allowsPets === false && tenant.pet){
+        if (this.allowsPets === false && tenant.pet) {
             return `${apt.unit} is available, but you must give ${tenant.pet} up for adoption!`
         }
-        apt.tenants.push(tenant)
+        let t = apt.tenants.push(tenant)
         console.log(tenant.name, 'has rented out', apt.unit)
+        return t
+    },
+    occupiedApts: function () {
+        // returns only the apts which have the tenants inside them
+        // condition to test: apt.tenants.lenght
+        return this.apartments.filter((el) => {
+            return el.tenants.length > 0
+        })
+    },
+    fullApts: function() {
+        // returns only the apts whitch are compleatly full 
+        // condition to test: apt.tenants.leanght === apt.bedrooms
+        return this.apartments.filter((el) => {
+            return el.tenants.length === el.bathrooms
+        })
     },
     apartments: [apt1, apt2, apt3]
 }
