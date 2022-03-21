@@ -1,9 +1,20 @@
-let cards = document.getElementsByClassName("card")
-cards = Array.from(cards)
-console.log(cards)
+// let cards = document.getElementsByClassName("card")
+// cards = Array.from(cards)
+// console.log(cards)
 
-cards.forEach((card)=> {
-    card.eventListener('click', () => {
+// cards.forEach ((card) => {
+//     card.addEventListener('click', () => {
+//         card.classList.toggle('transparent')
+//         alert('Card was clicked')
+//     })
+// })
+//
+
+let cards = document.getElementsByClassName('card')
+cards = Array.from(cards)
+
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
         card.classList.toggle('transparent')
         alert('Card was clicked')
     })
